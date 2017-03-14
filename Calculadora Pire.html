@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Calculadora de PIRE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculadora PIRE">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Alvaro Mesa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        body {
+            background-color: #5F5293;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        section {
+            background-color: white;
+            box-shadow: 2px 2px black;
+            margin: 2px 2px;
+            padding: 5px 10px;
+        }
+        
+        #calc {
+            background-color: white;
+            margin: 5px 5px;
+        }
+        
+        form label {
+            display: flex;
+        }
+        
+        #resultado {
+            font-weight: bold;
+        }
+    </style>
+    <script script type="text/javascript" src="calcuPire.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <section>
+
+        <div id="calc">
+            <h1>Calculadora de PIRE</h1>
+            <p>En sistemas de Radiocomunicación, la Potencia Isotrópica Radiada Equivalente (PIRE) es la cantidad de potencia que emitiría una antena isotrópica teórica (es decir, aquella que distribuye la potencia exactamente igual en todas direcciones)
+                para producir la densidad de potencia observada en la dirección de máxima ganancia de una antena. El PIRE tiene en cuenta las perdidas de la línea de transmisión y en los conectores e incluye la ganancia de la antena. La PIRE se expresa
+                habitualmente en decibelios respecto a una potencia de referencia emitida por una potencia de señal equivalente. La PIRE permite comparar emisores diferentes independientemente de su tipo, tamaño o forma. Conociendo la PIRE y la ganancia
+                de la antena real es posible calcular la potencia real y los valores del campo electromagnético.</p>
+
+            <p>PIRE se calcula sumando la Ganancia de la potencia de salida del Transmisor TX en Decibeles(dBm), menos la Perdida de los cables y conectores (dB) más la Ganancia de la antena(dBi)</p>
+
+
+
+            <form>
+                <label> Potencia de salida de Transmisor TX en Decibeles(dBm)</label>
+                <input type="number" name="num1" id="num1">
+                <label>  Perdida de los cables y conectores (dB)</label>
+                <input type="number" name="num2" id="num2">
+                <label> Ganancia de la antena(dBi)</label>
+                <input type="number" name="num3" id="num3">
+                <input type="button" id="calcular" value="Calcular" onclick='suma()'>
+                <input type="reset" value="cancelar">
+            </form>
+
+
+            <div id="resultado">Resultado aqui</div>
+
+
+        </div>
+    </section>
+
+
+
+</body>
+
+
+
+
+
+</html>
