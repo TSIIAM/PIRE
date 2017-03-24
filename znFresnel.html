@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Calculadora de la Zona de Fresnel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculadora PIRE">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Alvaro Mesa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        body {
+            background-color: #5F5293;
+            font-size: 18px;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        section {
+            background-color: white;
+            box-shadow: 2px 2px black;
+            margin: 2px 2px;
+            padding: 5px 10px;
+        }
+        
+        #calc {
+            background-color: white;
+            margin: 5px 5px;
+        }
+        
+        form label {
+            display: flex;
+        }
+        
+        #resultado {
+            font-weight: bold;
+        }
+        
+        .introImg {
+            width: 70%;
+            height: 70%;
+        }
+    </style>
+    <script type="text/javascript" src="calcularzf.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <section>
+
+        <div id="calc">
+            <h1>Calculadora de Zona de Fresnel</h1>
+
+            <img class="introImg" src="FresnelSVG1.png">
+
+            <p> Se llama Zona de Fresnel al volumen de espacio entre el emisor de una onda electromagnética, acústica, etc.- y un receptor, de modo que el desfase de las ondas en dicho volumen no supere los 180º. Así, la fase mínima se produce para el rayo
+                que une en línea recta al emisor y el receptor.</p>
+
+            <img src="formulaznfso.jpg">
+            <p>La Zona de Fresnel se calcula con el radio del elipsoide de Fresnel en metros por raiz de la distancia total entre el transmisor y el receptor, divido la frecuencia en GHz * 4.
+                <br /> d = Distancia total entre transmisor y receptor en kilometros
+                <br /> f = Frecuencia en GHz
+                <br /> r = Altura en metros que deben tener las antenas
+
+
+            </p>
+
+
+
+            <form>
+                <label> Distance entre las Antenas(mts)</label>
+                <input type="number" name="num1" id="num1">
+                <label>  Frecuencia  (GHz)</label>
+                <input type="number" name="num2" id="num2">
+                <br />
+                <input type="button" id="calcular" value="Calcular">
+                <input type="reset" value="cancelar">
+            </form>
+
+
+            <div id="resultado">La zona de Fresnel aqui</div>
+
+
+        </div>
+    </section>
+
+
+
+</body>
+
+
+
+
+
+</html>
